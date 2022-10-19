@@ -1,10 +1,13 @@
 const main = document.querySelector(".main")
-const iframe=`<iframe width="560" height="315" src="https://www.youtube.com/embed/1TewCPi92ro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+const iframe = document.querySelector(".gif");
+const h1 =document.querySelector("h1");
 function handleLoad(){
     let day = new Date ()
-    if(day.getDay()===5){
-        main.innerHTML=iframe;
-    }
+    if(day.getDay()===3){
+        h1.innerText="Yeah, Baby!"
+        console.log("it's Friday")
+      
+    } else {iframe.style.display="none";};
 
 }
 handleLoad()
